@@ -13,8 +13,8 @@
     font-size: 40px;
 }
 
-#result, #correct-numbers{
-    font-size: 50px;
+#result{
+    font-size: 30px;
     font-weight: 600;
 }
 

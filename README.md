@@ -18,13 +18,10 @@
 - Al click sul bottone:
     - Prendo i valori inseriti dall'utente, li converto in numero e li salvo in una lista
     - Verifico i valori inseriti:
-        - **SE** non sono presenti tutti e 5 i valori:
-            - Messaggio di errore
-        - **ALTRIMENTI**:
-            - **FINO A CHE** non raggiungo la lunghezza della lista dei valori dell'utente:
-                - Prendo un valore dalla lista valori utente
-                - **SE** è incluso nella lista valori da indovinare:
-                    - Lo metto nella lista valori indovinati
+        - **FINO A CHE** non raggiungo la lunghezza della lista dei valori dell'utente:
+            - Prendo un valore dalla lista valori utente
+            - **SE** è incluso nella lista valori da indovinare:
+                - Lo metto nella lista valori indovinati
     - Stampo in pagina:
         - Quanti valori ha indovinato (lunghezza della lista indovinati)
         - **SE** la lista è vuota:

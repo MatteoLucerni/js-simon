@@ -4,7 +4,6 @@ console.log('JS OK');
 const cd = document.getElementById('cd');
 const randomNumbersTarget = document.getElementById('random-numbers');
 const randomNumbersContainer = document.getElementById('random-container');
-const correctNumbersTarget = document.getElementById('correct-number');
 const resultTarget = document.getElementById('result');
 const resultsBox = document.getElementById('results-box');
 const userInput = document.querySelectorAll('input');
@@ -18,9 +17,9 @@ const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min)
 // Genero 5 numeri casuali diversi
 const randomNumbers = [];
 while(randomNumbers.length < 5) {
-    let number = getRandomNumber(1,100);
+    let number = getRandomNumber(10,100);
     if(randomNumbers.includes(number)){
-        number = getRandomNumber(1,100);
+        number = getRandomNumber(10,100);
     } else {
         randomNumbers.push(number);
     }
@@ -39,4 +38,36 @@ const interval = setInterval(() => {
         cd.innerText = --counter;
     }
 }, 500);
+
+// Azioni al click del bottone
+button.addEventListener('click', () => {
+    // Prendo i valori inseriti dall'utente e li salvo
+    const userGuesses = [];
+    for(let i = 0; i < userInput.length; i++) userGuesses.push(parseInt(userInput[i].value));
+    console.log(userGuesses);
+    // Verifico i valori inseriti
+    for(let i = 0; i < userGuesses.length; i++){
+        if(randomNumbers.includes(userGuesses[i])){
+            correctNumbers.push(userGuesses[i]);
+        };
+    }
+    // Controllo il risultato e lo stampo in pagina
+    console.log(correctNumbers);
+    let message;
+    if(correctNumbers.length === 0){
+        message = 'Hai perso D: Non hai indovinato nessun numero';
+    } else if(correctNumbers.length === randomNumbers.length) {
+        message = 'Hai indovinato tutti i numero/i, grande! :D'
+    } else {
+        message = `Ottimo lavoro! Hai indovinato ${correctNumbers.length} numeri: ${correctNumbers}`
+    }
+
+    resultTarget.innerText = message;
+
+    // Rimuovo il form
+    form.classList.add('d-none');
+
+    // Mostro il risultato
+    resultsBox.classList.remove('d-none');
+});
 
