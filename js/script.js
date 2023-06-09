@@ -28,7 +28,7 @@ randomNumbersTarget.innerText = randomNumbers;
 console.log(randomNumbers);
 
 // Creo il countdown
-let counter = 5;
+let counter = 30;
 const interval = setInterval(() => {
     if(counter === 0){
         clearInterval(interval);
@@ -47,9 +47,7 @@ button.addEventListener('click', () => {
     console.log(userGuesses);
     // Verifico i valori inseriti
     for(let i = 0; i < userGuesses.length; i++){
-        if(randomNumbers.includes(userGuesses[i])){
-            correctNumbers.push(userGuesses[i]);
-        };
+        if(randomNumbers.includes(userGuesses[i])) correctNumbers.push(userGuesses[i])
     }
     // Controllo il risultato e lo stampo in pagina
     console.log(correctNumbers);
@@ -57,9 +55,9 @@ button.addEventListener('click', () => {
     if(correctNumbers.length === 0){
         message = 'Hai perso D: Non hai indovinato nessun numero';
     } else if(correctNumbers.length === randomNumbers.length) {
-        message = 'Hai indovinato tutti i numero/i, grande! :D'
+        message = 'Hai indovinato tutti i numeri, grande! :D'
     } else {
-        message = `Ottimo lavoro! Hai indovinato ${correctNumbers.length} numeri: ${correctNumbers}`
+        message = `Ottimo lavoro! Hai indovinato ${correctNumbers.length} numero/i: ${correctNumbers}`
     }
 
     resultTarget.innerText = message;
