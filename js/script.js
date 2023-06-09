@@ -25,7 +25,7 @@ while(randomNumbers.length < 5) {
     }
 }
 randomNumbersTarget.innerText = randomNumbers;
-console.log(randomNumbers);
+console.log('Numbers to guess: ' + randomNumbers);
 
 // Creo il countdown
 let counter = 30;
@@ -37,14 +37,14 @@ const interval = setInterval(() => {
     } else {
         cd.innerText = --counter;
     }
-}, 500);
+}, 1000);
 
 // Azioni al click del bottone
 button.addEventListener('click', () => {
     // Prendo i valori inseriti dall'utente e li salvo
     const userGuesses = [];
     for(let i = 0; i < userInput.length; i++) userGuesses.push(parseInt(userInput[i].value));
-    console.log(userGuesses);
+    console.log('User guesses: ' + userGuesses);
     // Verifico i valori inseriti
     for(let i = 0; i < userGuesses.length; i++){
         if(randomNumbers.includes(userGuesses[i]) && !correctNumbers.includes(userGuesses[i])){
@@ -52,7 +52,7 @@ button.addEventListener('click', () => {
         };
     }
     // Controllo il risultato e lo stampo in pagina
-    console.log(correctNumbers);
+    console.log('User correct guesses: ' + correctNumbers);
     let message;
     if(correctNumbers.length === 0){
         message = 'Hai perso D: Non hai indovinato nessun numero';
