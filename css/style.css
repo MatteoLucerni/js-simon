@@ -1,0 +1,19 @@
+#cd{
+    font-size: 100px;
+    font-weight: 700;
+}
+
+#form input{
+    width: calc(100% / 6);
+    text-align: center;
+    height: 50px;
+}
+
+#form button{
+    font-size: 40px;
+}
+
+#result, #correct-numbers{
+    font-size: 50px;
+    font-weight: 600;
+}

@@ -1,6 +1,6 @@
 - Prendo gli elementi dal DOM:
-    - Target per stampare i 5 numeri generati casualmente
     - Target per stampare il countdown
+    - Target per stampare i 5 numeri generati casualmente
     - Target per stampare i valori indovinati
     - Input dell'utente con i 5 numeri che indovinerà
     - Bottone per inviare i valori
