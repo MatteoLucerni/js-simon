@@ -37,6 +37,15 @@ const interval = setInterval(() => {
     } else {
         cd.innerText = --counter;
     }
+
+    // Cambio il colore in base al tempo che resta
+    if(counter <= 30 && counter > 20){
+        cd.classList.add('text-success');
+    } else if(counter <= 20 && counter > 10) {
+        cd.classList.add('text-warning');
+    } else {
+        cd.classList.add('text-danger');
+    }
 }, 1000);
 
 // Azioni al click del bottone
@@ -54,7 +63,7 @@ button.addEventListener('click', () => {
     // Controllo il risultato e lo stampo in pagina
     console.log('User correct guesses: ' + correctNumbers);
     let message;
-    if(correctNumbers.length === 0){
+    if(!correctNumbers.length){
         message = 'Hai perso D: Non hai indovinato nessun numero';
     } else if(correctNumbers.length === randomNumbers.length) {
         message = 'Hai indovinato tutti i numeri, grande! :D'
