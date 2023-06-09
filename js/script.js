@@ -9,7 +9,12 @@ const resultsBox = document.getElementById('results-box');
 const userInput = document.querySelectorAll('input');
 const form = document.getElementById('form');
 const button = document.getElementById('guess-button');
+const resetButton = document.getElementById('reset-button');
 const correctNumbers = [];
+
+resetButton.addEventListener('click', () => {
+    location.reload();
+});
 
 // Funzioni
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
