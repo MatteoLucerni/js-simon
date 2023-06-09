@@ -28,7 +28,7 @@ randomNumbersTarget.innerText = randomNumbers;
 console.log(randomNumbers);
 
 // Creo il countdown
-let counter = 30;
+let counter = 3;
 const interval = setInterval(() => {
     if(counter === 0){
         clearInterval(interval);
@@ -47,7 +47,9 @@ button.addEventListener('click', () => {
     console.log(userGuesses);
     // Verifico i valori inseriti
     for(let i = 0; i < userGuesses.length; i++){
-        if(randomNumbers.includes(userGuesses[i])) correctNumbers.push(userGuesses[i])
+        if(randomNumbers.includes(userGuesses[i]) && !correctNumbers.includes(userGuesses[i])){
+            correctNumbers.push(userGuesses[i]);
+        };
     }
     // Controllo il risultato e lo stampo in pagina
     console.log(correctNumbers);
