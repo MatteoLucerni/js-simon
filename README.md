@@ -1,0 +1,33 @@
+- Prendo gli elementi dal DOM:
+    - Target per stampare i 5 numeri generati casualmente
+    - Target per stampare il countdown
+    - Target per stampare i valori indovinati
+    - Input dell'utente con i 5 numeri che indovinerà
+    - Bottone per inviare i valori
+- Creo una lista valori indovinati
+- Genero 5 numeri casuali e li salvo in una lista
+- Creo il coutdown:
+    - Imposto un valore counter di base per il countdown (30)
+    - **OGNI** secondo:
+        - decremento il counter di 1
+    - **SE** il counter è uguale a 0:
+        - Stoppo il countdown
+        - Faccio scomparire i numeri da indovinare
+        - Faccio comparire gli input per l'utente
+- Al click sul bottone:
+    - Prendo i valori inseriti dall'utente, li converto in numero e li salvo in una lista
+    - Verifico i valori inseriti:
+        - **SE** non sono presenti tutti e 5 i valori:
+            - Messaggio di errore
+        - **ALTRIMENTI**:
+            - **FINO A CHE** non raggiungo la lunghezza della lista dei valori dell'utente:
+                - Prendo un valore dalla lista valori utente
+                - **SE** è incluso nella lista valori da indovinare:
+                    - Lo metto nella lista valori indovinati
+    - Stampo in pagina:
+        - Quanti valori ha indovinato (lunghezza della lista indovinati)
+        - **SE** la lista è vuota:
+            - Messaggio sconfitta
+        - **ALTRIMENTI**:
+            - Messaggio vittoria
+            - Stampo in pagina i numeri nella lista indovinati
