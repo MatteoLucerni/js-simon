@@ -28,7 +28,7 @@ randomNumbersTarget.innerText = randomNumbers;
 console.log(randomNumbers);
 
 // Creo il countdown
-let counter = 3;
+let counter = 30;
 const interval = setInterval(() => {
     if(counter === 0){
         clearInterval(interval);
