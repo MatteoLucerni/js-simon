@@ -9,11 +9,12 @@
 - Creo il coutdown:
     - Imposto un valore counter di base per il countdown (30)
     - **OGNI** secondo:
-        - decremento il counter di 1
-    - **SE** il counter è uguale a 0:
-        - Stoppo il countdown
-        - Faccio scomparire i numeri da indovinare
-        - Faccio comparire gli input per l'utente
+        - **SE** il counter è uguale a 0:
+            - Stoppo il cd
+            - Faccio scomparire i numeri da indovinare
+            - Faccio comparire gli input per l'utente
+        - **ALTRIMENTI**:
+            - decremento il counter di 1
 - Al click sul bottone:
     - Prendo i valori inseriti dall'utente, li converto in numero e li salvo in una lista
     - Verifico i valori inseriti:

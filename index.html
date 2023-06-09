@@ -13,12 +13,15 @@
         <div id="cd" class="d-flex justify-content-center align-items-center mb-5">
             30
         </div>
-        <div id="random-numbers">
-    
+        <div id="random-container" class="text-center">
+            <h1>Memorizza questi numeri:</h1>
+            <div id="random-numbers" class="text-info">
+                
+            </div>
         </div>
-        <div id="form" class="text-center w-100">
+        <div id="form" class="text-center w-100 d-none">
             <div class="d-flex mb-5 gap-4 justify-content-center">
-                <input type="number" placeholder="Numero...">
+                <input type="number" value="" placeholder="Numero...">
                 <input type="number" placeholder="Numero...">
                 <input type="number" placeholder="Numero...">
                 <input type="number" placeholder="Numero...">
@@ -26,11 +29,13 @@
             </div>
             <button id="guess-button" class="btn btn-primary">INVIA!</button>
         </div>
-        <div id="result" class="mt-5">
+        <div id="results-box" class="d-none">
+            <div id="result" class="mt-5">
             
-        </div>
-        <div id="correct-numbers">
-            
+            </div>
+            <div id="correct-numbers">
+                
+            </div>
         </div>
     </div>
     
