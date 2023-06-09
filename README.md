@@ -1,4 +1,4 @@
-- Prendo gli elementi dal DOM:
+- Preliminari:
     - Target per stampare il countdown
     - Target per stampare i 5 numeri generati casualmente
     - Target per stampare i valori indovinati
