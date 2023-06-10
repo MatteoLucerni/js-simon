@@ -29,7 +29,7 @@ while(randomNumbers.length < 5) {
         randomNumbers.push(number);
     }
 }
-randomNumbersTarget.innerText = randomNumbers;
+randomNumbersTarget.innerText = randomNumbers.join(' ');
 console.log('Numbers to guess: ' + randomNumbers);
 
 // Creo il countdown
